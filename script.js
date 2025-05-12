@@ -14,4 +14,14 @@ contactes.forEach(nom => {
 });
 
 // Afegeix la llista a la pàgina
+
 document.body.appendChild(llista);
+document.querySelector("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const input = document.querySelector("#nom");
+  if (input.value.trim() === "") {
+    alert("El camp no pot estar buit");
+    return;
+  }
+  // Lògica per afegir el contacte...
+});
